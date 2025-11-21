@@ -47,8 +47,8 @@ app.get('/:ipPort', async (req, res) => {
 
     try {
         const [ipinfo, myips] = await Promise.all([
-            sendRequest('myip.bexcode.us.to', '/', true),
-            sendRequest('myip.bexcode.us.to', '/', false),
+            sendRequest('myasn.afrcloudnet.workers.dev', '/', true),
+            sendRequest('myasn.afrcloudnet.workers.dev', '/', false),
         ]);
         const ipingfo = JSON.parse(ipinfo);
         const {myip, ...ipinfoh} = ipingfo
